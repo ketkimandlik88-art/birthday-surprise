@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For You 💌</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+  <body>
+    <iframe src="music.html" style="display:none;"></iframe>
+    <audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+    <div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <div class="lights">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="progress-container">
+    <div class="progress-bar" style="width:25%;"></div>
+</div>
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="birthday-card page">
+<div class="progress">
+    <div class="progress-fill" style="width:50%;"></div>
+</div>
+<div id="envelope" onclick="showLetter()">
+💌
+</div>
+
+<h2>Your Letter is Waiting...</h2>
+<hr class="gold-line">
+<p>
+Open the envelope to read your birthday letter.
+</p>
+
+<button onclick="showLetter()">
+📩 Open Letter
+</button>
+<button onclick="goNext()">
+🎁 Next Surprise
+</button>
+<div id="letter" style="display:none; margin-top:20px;">
+
+<h2>Dear Mental ❤️</h2>
+<div class="hearts">
+    <span>❤️</span>
+    <span>💗</span>
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+</div>
+<div id="typewriter"></div>
+<div class="hearts">
+    <span>❤️</span>
+    <span>💗</span>
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+</div>
+</div>
+
+</div>
+<div class="hearts">
+    <span>❤️</span>
+    <span>💗</span>
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+</div>
+<script src="script.js"></script>
+
+<script>
+const message = `Dear Yash ❤️
+
+Sabse pehle,Many Many Happiest Returns of the Day my dumbo 🎂❤️
+
+Aaj cha day khup special aahe because aaj tya person cha birthday aahe jo majhya life cha ek khup  important part aahe.
+
+Tu woh person ho jiske saath main literally kuch bhi baat kar sakti hu. Main moody ho sakti hu, angry bird ban sakti hu 😤😂, cry baby ban sakti hu, happy ho sakti hu, funniest ban sakti hu aur full question bank lekar bhi aa sakti hu 🤭
+
+Aur tum phir bhi ye sab handle kar lete ho.
+
+Thank you for everything, my dumbo ❤️
+
+Jeva tu majhya life madhe nvtas na teva life khup vegli hoti. Me smile tr karaychi,pn madhun ti happiness nahi hoti.Kuthe na kuthe me mlach visrun geli hoti. 
+
+Mg tu aalas... 🥹
+
+Mla mahit nvt ki tu majhya sathi itka important hoshil as. Aur haan, ye sunkar zyada hawa me mat udna 😒😂
+
+Me n bolayla ghabraychi pn tu bollas aanibmg tujhyasobt bolli tr itki comfortable jhali kahi divsatch majh mlach smjhl nahi.Tula n sangta sgl kalaych majhya mnatl aani js tu smjvaychas na khrch changl feel vaych khupch jast br vataych mla.
+
+I don't know how you do that, but mla he khup mst vatt. ❤️
+
+Tune hamesha meri care ki hai. Kabhi kabhi lagta hai ki tumne mujhe ek friend se zyada apni responsibility ki tarah sambhala hai.
+
+Js lahan astanna papa sambhalaychet na, tsch prakare tu mala sambhaltoys ❤️
+
+Haa, tu mala ignore khup jastch karto 😒 aani tyamule mala khup raag  yeto 😤 Kdhikdhi tr mi ekdum hyper level la jate.
+
+Pn mg tu kahi tri as kartos ki majha sgla raag gayab hoto aani mi parat happy hote 🥹❤️
+
+Tu majhe mood swings, majha raag, majh pagalpan aani majhe sagle questions handle kels ani ajunhi kartoys.
+
+Mhanunach tu majhya sathi khup important aahes ❤️
+
+Ek gosht nehmi lkshyat thev mental...
+
+Kiti hi misunderstandings jhali, kiti hi problems aale tri mi kuthehi janar nahi.
+
+I will always be there for you ❤️
+
+Aaplya friendship cha THE END kadhi vayla nako hava 🥺
+
+Remember one thing...
+
+Your baby girl is always there for you ❤️
+
+Always happy rha, apna khayal rakh aur smile kabhi mat khona ✨
+Me tula mental bolte but in reality your are my mental piece. ❤️❤️🥹🥹
+Thank you for every small thing dumbo.
+
+You are the best person in my life and always be special ❤️
+Ajun ek tu majhya sathi fkt majha friend nahiyes tr sgl kahi aahes everything.
+Tujhya mule me mla parat find kel chotusi ketu la 🥹🥹🥹
+Aani me tujhyat na mla bghte seriously tujhyat na same mich aahe jshi me lahan hoti na tsach tu aata aahes mhnun mla please majhya pasun nko durr gheun jaus kdhich nahi...
+
+Happiest Birthday my Tom 🐻❤️
+
+Always be my Tom... only and only my Tom 😒🥹😂
+
+Smjhl ka nahi tr bghch tu 😤❤️
+
+Aani na me tula khrr tech sangitly sgl kahi bappa kasam🥺🥺🥺🥺
+Me ithe thambte baki sgl msg vr krelch wish  🤭🤭🤭🤭🤭
+- By your Little Girl❤️`;
+
+let i = 0;
+let typingTimer;
+function typeWriter() {
+    if (i < message.length) {
+        document.getElementById("typewriter").innerHTML += message.charAt(i);
+        i++;
+        typingTimer = setTimeout(typeWriter, 45);
+    }
+}
+
+window.onload = typeWriter;
+function goNext() {
+
+    // Typewriter stop
+    clearTimeout(typingTimer);
+
+    // Music ka current time save
+    const music = document.getElementById("bgMusic");
+    if (music) {
+        localStorage.setItem("musicTime", music.currentTime);
+    }
+
+    // Celebration page
+    window.location.replace("memories.html");
+}
+</script>
+<footer>
+Made with ❤️ by your baby girl
+</footer>
+</body>
+
+</html>

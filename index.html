@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Happy Birthday Yash 🎂 (Mental)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">  
+</head> 
+<body>  
+<iframe src="music.html" style="display:none;">
+</iframe>
+  <div id="lockScreen">  
+    <h2>🔐 A Secret Surprise</h2>  
+    <p>Enter Password 💗</p>  <input type="password" id="password" placeholder="Password">  
+<button onclick="checkPassword()">Unlock ✨</button>  
+
+<p id="error"></p>
+
+</div>  
+  <audio id="bgMusic" loop>  
+    <source src="music/birthday.mp3" type="audio/mp3">  
+</audio>  <button id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+  <div class="stars">  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+</div>  
+  <div class="lights">  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+    <span></span>  
+</div>  
+  <div class="progress-container">  
+    <div class="progress-bar" style="width:10%;"></div>  
+</div>  
+<div id="loader">  
+    <h1>🎂 Loading Your Surprise...</h1>  
+    <p>❤️ Preparing Something Special...</p>  
+</div>  <div id="mainContent" style="display:none;">  
+    <h1>🎉 Happy Birthday Yash 🎂(My Mental😜)</h1>  <h2>Made by your baby girl 🤭</h2>
+
+<button onclick="openSurprise()">  
+    🎁 Open Your Surprise  
+</button>  
+</div>  
+<button onclick="window.location.href='letter.html'">
+   </button>
+<script>  
+setTimeout(function(){  
+    document.getElementById("loader").style.display="none";  
+},2500);  
+</script>  <script src="script.js"></script>
+
+<footer>  
+    Made with ❤️ by your baby girl🤭  
+    <br>  
+    <span>Specially for you my person 🎂</span>  
+</footer>  
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+
+<style>
+body{
+    margin:0;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    flex-direction:column;
+    color:white;
+    font-family:Arial;
+}
+
+.loader{
+    width:90px;
+    height:90px;
+    border:10px solid #333;
+    border-top:10px solid gold;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+h2{
+    margin-top:20px;
+    color:gold;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+</style>
+
+</head>
+
+<body>
+<iframe src="music.html" style="display:none;"></iframe>
+ <audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+
+
+<div class="loader"></div>
+
+<h2>Preparing a Special Surprise for My Mental... 🤭❤️</h2>
+
+<script>
+setTimeout(function(){
+window.location.href="celebration.html";
+},3000);
+</script>
+</body>
+<footer>
+    Made with ❤️ by your baby girl🤭
+    <br>
+    <span>Specially for you my person🎂</span>
+</footer>
+</html>

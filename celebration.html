@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Celebration 🎂✨</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">⏸️</button>
+<div class="celebration-page">
+
+<h1>🎂 Happy Birthday Yash 🎂</h1>
+
+<p class="subtitle">
+A magical surprise is waiting for you... 💖
+</p>
+<div id="countdown">10</div>
+
+<div id="cake-area">
+
+
+<div class="cake">
+
+<div id="magicOverlay"></div>
+
+<div id="sparkles">
+
+<span>✨</span>
+<span>⭐</span>
+<span>✨</span>
+<span>💫</span>
+<span>⭐</span>
+<span>✨</span>
+<span>💖</span>
+
+</div>
+
+<p id="magicLine"></p>
+<p id="wishText"></p>
+<div class="candles">
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+<div class="candle">
+<div class="flame"></div>
+</div>
+
+</div>
+
+<div class="cherries">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="layer top">
+
+<div class="icing">
+
+<span class="sprinkle"></span>
+<span class="sprinkle"></span>
+<span class="sprinkle"></span>
+<span class="sprinkle"></span>
+<span class="sprinkle"></span>
+
+</div>
+
+</div>
+
+<div class="layer middle"></div>
+
+<div class="layer bottom"></div>
+
+</div>
+
+</div>
+
+<h2 id="birthday-message">
+🎉 Happy Birthday Once Again 🎉
+</h2>
+
+<canvas id="confetti-canvas"></canvas>
+
+<div class="celebration-box">
+
+<h2 class="title">
+🥳 Let's Celebrate!
+</h2>
+
+<p class="subtitle">
+Today is all about smiles, happiness and unforgettable memories. 💖
+</p>
+
+<div class="cake-container" onclick="explodeFireworks()">
+
+<div class="cake-emoji">
+🎂
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const canvas=document.getElementById("confetti-canvas");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+window.addEventListener("resize",()=>{
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+});
+
+let particles=[];
+
+class Particle{
+
+constructor(x,y,explode=false){
+
+this.x=x||Math.random()*canvas.width;
+
+this.y=y||(explode?y:-20);
+
+this.size=Math.random()*7+4;
+
+this.speedX=explode?(Math.random()-0.5)*12:Math.random()*2-1;
+
+this.speedY=explode?(Math.random()-0.5)*12:Math.random()*4+2;
+
+this.gravity=explode?0.2:0;
+
+this.rotation=Math.random()*360;
+
+this.rotationSpeed=Math.random()*8-4;
+
+this.opacity=1;
+
+this.explode=explode;
+
+this.color=[
+"#ff4d6d",
+"#ffd700",
+"#00e5ff",
+"#7cff6b",
+"#ff9800",
+"#ff66ff"
+][Math.floor(Math.random()*6)];
+
+}
+
+update(){
+
+this.x+=this.speedX;
+
+this.y+=this.speedY;
+
+this.speedY+=this.gravity;
+
+this.rotation+=this.rotationSpeed;
+
+if(this.explode){
+
+this.opacity-=0.015;
+
+}
+
+}
+
+draw(){
+
+ctx.save();
+
+ctx.globalAlpha=this.opacity;
+
+ctx.translate(this.x,this.y);
+
+ctx.rotate(this.rotation*Math.PI/180);
+
+ctx.fillStyle=this.color;
+
+ctx.fillRect(-this.size/2,-this.size/2,this.size,this.size);
+
+ctx.restore();
+
+}
+
+}
+
+function spawnConfetti(){
+
+if(particles.length<120){
+
+particles.push(new Particle());
+
+}
+
+}
+
+function explodeFireworks(e){
+
+let x=window.innerWidth/2;
+
+let y=window.innerHeight/2;
+
+if(e){
+
+x=e.clientX;
+
+y=e.clientY;
+
+}
+
+for(let i=0;i<70;i++){
+
+particles.push(new Particle(x,y,true));
+
+}
+
+}
+
+window.addEventListener("click",explodeFireworks);
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+spawnConfetti();
+
+particles.forEach((p,index)=>{
+
+p.update();
+
+p.draw();
+
+if(p.y>canvas.height||p.opacity<=0){
+
+particles.splice(index,1);
+
+}
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+</script>
+
+<div style="margin-top:40px;">
+
+<button class="surprise-btn" onclick="window.location.href='birthday.html'">
+💝Continue Your Surprise💝
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+const music = document.getElementById("bgMusic");
+
+if (music) {
+
+    // Resume from last saved position
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) {
+        music.currentTime = parseFloat(savedTime);
+    }
+
+    // Play music
+    music.play().catch(() => {});
+
+    // Save current position
+    setInterval(() => {
+        localStorage.setItem("musicTime", music.currentTime);
+    }, 500);
+
+    // Save before leaving page
+    window.addEventListener("beforeunload", () => {
+        localStorage.setItem("musicTime", music.currentTime);
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Surprise 🎁</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+  <body>
+    <iframe src="music.html" style="display:none;"></iframe>
+    <audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+    <div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <div class="lights">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="progress-container">
+    <div class="progress-bar" style="width:90%;"></div>
+</div>
+<audio id="bgMusic" autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+
+  <div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+  <div class="hearts">
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💝</span>
+</div>
+<div class="balloons">
+  <span>🎈</span>
+  <span>🎈</span>
+  <span>🎈</span>
+  <span>🎈</span>
+  <span>🎈</span>
+</div>
+<div class="birthday-card page">
+  <div class="progress">
+    <div class="progress-fill" style="width:100%;"></div>
+</div>
+<h1>🎁 A Gift From My Heart 🎁</h1>
+<p class="giftIntro">
+You have completed your 19-year journey...
+Now it's time to unwrap something made with lots of love. ❤️
+</p>
+<h2>Final Surprise</h2>
+<hr class="gold-line">
+<p>
+One last surprise is waiting just for you... ❤️
+</p>
+
+<button id="giftBtn" onclick="showGift()">
+🎁 Open Gift
+</button>
+<div id="giftContent" style="display:none;">
+  <div id="ending" style="display:none;">
+
+<h2>🌌 One Last Message...</h2>
+
+<p id="endingText"></p>
+<div id="finalImages" style="display:none;">
+
+<img src="images/yash.jpg" id="yashPhoto">
+
+<img src="images/guardianbell.png" id="bellPhoto"
+class="guardian-bell">
+</div>
+</div>
+<h2>Your Birthday Gift</h2>
+
+<p>
+A special gift is waiting for you... ❤️
+</p>
+<p id="finalMessage"></p>
+<span id="cursor">|</span>
+<button id="lastBtn" onclick="lastSurprise()">
+❤️ One Last Click
+</button>
+<p style="color:#FFD700; margin-top:20px; font-style:italic;">
+✨ Every click you made brought you one step closer to this surprise. ✨
+</p>
+<button onclick="playMusic()">
+🎵 Play Birthday Song
+</button>
+
+<audio id="birthdaySong">
+    <source src="music/happybirthday.mp3" type="audio/mpeg">
+</audio>
+</div>
+</div>
+<script src="script.js"></script>
+<footer>
+Made with ❤️ by your baby girl
+</footer>
+</body>
+</html>

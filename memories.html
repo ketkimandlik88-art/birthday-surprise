@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories 📸</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+  <body>
+   <iframe src="music.html" style="display:none;"></iframe>
+    <audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+    <div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <div class="lights">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="progress-container">
+    <div class="progress-bar" style="width:45%;"></div>
+</div>
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="birthday-card page">
+<div class="progress">
+    <div class="progress-fill" style="width:75%;"></div>
+</div>
+<h1>📸</h1>
+
+<h2>Memory Gallery</h2>
+
+<p>
+Every photo here holds a memory...
+Every smile, every fight, every silly moment. ❤️
+
+This gallery is made especially for you, Mental. 🤭
+</p>
+<h2>✨ Our Journey ✨</h2>
+<hr class="gold-line">
+<div class="scroll-arrow" onclick="scrollDown()">
+⬇️
+</div>
+<p>
+Every memory tells a little story... ❤️
+</p>
+<div class="gallery">
+
+<div class="memory">
+<h3>🌸 The Beginning</h3>
+<p>Where everything started... ❤️</p>
+</div>
+
+<div class="memory">
+<h3>😂 The Funny Moments</h3>
+<p>Proof that you're officially Mental. 🤭</p>
+</div>
+
+<div class="memory">
+<h3>🎂 Today</h3>
+<p>Happy Birthday, Mental ❤️</p>
+</div>
+
+</div>
+<h3>🤭 Also Known As...</h3>
+
+<div class="nickname-box">
+    <span>🐵 Bndr</span>
+    <span>🧠 Mental</span>
+    <span>🐘 Dumbo</span>
+    <span>😤 Chidku</span>
+    <span>✈️ Ladaku Viman</span>
+    <span>📚 Nobita</span>
+    <span>🦇 Bajarbattu</span>
+</div>
+<button onclick="window.location.href='timeline.html'"> 
+🎁 Continue
+</button>
+</div>
+<footer>
+Made with ❤️ by your baby girl
+</footer>
+<script>
+const music = document.getElementById("bgMusic");
+
+if (music) {
+
+    const savedTime = localStorage.getItem("musicTime");
+    if (savedTime) {
+        music.currentTime = parseFloat(savedTime);
+    }
+
+    music.play().catch(() => {});
+
+    window.addEventListener("click", () => {
+        music.play().catch(() => {});
+    }, { once: true });
+
+    setInterval(() => {
+        localStorage.setItem("musicTime", music.currentTime);
+    }, 500);
+}
+</script>
+</body>
+</html>
